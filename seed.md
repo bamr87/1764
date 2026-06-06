@@ -29,3 +29,46 @@ Completed with input: {
 }
 
 [bamr87/1764](https://github.com/bamr87/1764) is live with a README covering key topics and notable events of the year 1764 — including the Sugar Act, Mozart's European tour, founding of St. Louis, Voltaire's *Dictionnaire philosophique*, the Spinning Jenny, and Brown University.
+
+
+---
+
+## Add research-history skill, update-readme prompt, and encode-seed prompt — 2026-06-06
+
+Created the foundational agent customization layer for the 1764 repo: a crawling skill to research historical topics, a prompt to populate the README from research, and a prompt to log session work into this seed file.
+
+Ran vscode_askQuestions
+Completed with input: {
+  "questions": [
+    { "header": "skill_purpose", "question": "What should this skill help you do?" },
+    { "header": "skill_scope", "question": "Where should this skill live?" },
+    { "header": "skill_detail", "question": "Anything specific you want the skill to do or produce?" }
+  ]
+}
+
+User selected: research and document historical topics for the 1764 repo; workspace scope (.github/skills/); crawl as the core capability.
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/skills/research-history/SKILL.md"
+}
+
+Created the research-history skill with a 5-step procedure: identify sources, extract key facts, format output, update the repository, and verify dates fall within 1764.
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/prompts/update-readme.prompt.md"
+}
+
+Created a prompt that drives the research-history skill to batch-populate the Notable Events table, from a topic list or by auto-detecting category gaps.
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/prompts/encode-seed.prompt.md"
+}
+
+Created a prompt to append a structured session log entry to seed.md at the end of any working session.
+
+- Created `.github/skills/research-history/SKILL.md`: On-demand skill for crawling Wikipedia/Britannica and documenting 1764 historical topics
+- Created `.github/prompts/update-readme.prompt.md`: Prompt to research topics and add rows to the README Notable Events table
+- Created `.github/prompts/encode-seed.prompt.md`: Prompt to encode session tool calls and file changes into seed.md
