@@ -1,2 +1,34 @@
 # 1764
-All things 1764 — history, events, culture, and more from the year 1764
+
+> All things 1764 — history, events, culture, discoveries, and more from the year 1764.
+
+## What is 1764?
+
+1764 was a pivotal year in the 18th century. This repository serves as a curated collection of knowledge, references, and resources about everything related to the year **1764**.
+
+## Topics
+
+- **History & Politics** — World events, treaties, and political shifts
+- **Science & Discovery** — Inventions, publications, and scientific milestones
+- **Arts & Culture** — Literature, music, architecture, and art
+- **Economics** — Trade, legislation (e.g., the British Sugar Act), and commerce
+- **People** — Notable births, deaths, and figures of the era
+
+## Notable Events of 1764
+
+| Event | Description |
+|---|---|
+| Sugar Act | British Parliament passes the American Revenue Act (Sugar Act), taxing sugar and other goods in the colonies |
+| Spinning Jenny | James Hargreaves reportedly invents the Spinning Jenny (~1764), sparking the Industrial Revolution |
+| St. Louis founded | Pierre Laclède and Auguste Chouteau establish the settlement of St. Louis |
+| Voltaire's *Dictionnaire philosophique* | Published in 1764, a landmark work of the Enlightenment |
+| Mozart tours Europe | Wolfgang Amadeus Mozart (age 8) performs across Europe |
+| Brown University founded | Originally chartered as the College of Rhode Island |
+
+## Contributing
+
+Contributions welcome! If you know something interesting about 1764, open an issue or submit a pull request.
+
+## License
+
+MIT
