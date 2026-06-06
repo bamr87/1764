@@ -30,7 +30,6 @@ Completed with input: {
 
 [bamr87/1764](https://github.com/bamr87/1764) is live with a README covering key topics and notable events of the year 1764 — including the Sugar Act, Mozart's European tour, founding of St. Louis, Voltaire's *Dictionnaire philosophique*, the Spinning Jenny, and Brown University.
 
-
 ---
 
 ## Add research-history skill, update-readme prompt, and encode-seed prompt — 2026-06-06
@@ -72,3 +71,54 @@ Created a prompt to append a structured session log entry to seed.md at the end 
 - Created `.github/skills/research-history/SKILL.md`: On-demand skill for crawling Wikipedia/Britannica and documenting 1764 historical topics
 - Created `.github/prompts/update-readme.prompt.md`: Prompt to research topics and add rows to the README Notable Events table
 - Created `.github/prompts/encode-seed.prompt.md`: Prompt to encode session tool calls and file changes into seed.md
+
+---
+
+## Add deep-dive prompt and add-topic skill — 2026-06-06
+
+Created a `deep-dive` prompt for producing full dedicated topic files, and an `add-topic` orchestration skill that routes incoming topics through research, format selection, file creation, README linking, and optional seed logging.
+
+Ran read_file
+Completed with input: {
+  "filePath": ".github/skills/research-history/SKILL.md"
+}
+
+Confirmed existing research-history skill structure and procedure to use as a dependency.
+
+Ran read_file
+Completed with input: {
+  "filePath": ".github/prompts/update-readme.prompt.md"
+}
+
+Confirmed existing update-readme prompt (bulk table rows) to understand the coverage gap.
+
+Ran read_file
+Completed with input: {
+  "filePath": "/Applications/.../agent-customization/references/prompts.md"
+}
+
+Loaded prompts reference for frontmatter template and core principles.
+
+Ran read_file
+Completed with input: {
+  "filePath": "/Applications/.../agent-customization/references/skills.md"
+}
+
+Loaded skills reference for SKILL.md format, progressive loading rules, and anti-patterns.
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/prompts/deep-dive.prompt.md"
+}
+
+Created deep-dive.prompt.md: researches one topic in depth, creates a category file (history/science/arts/economics/people), and links it from the README table.
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/skills/add-topic/SKILL.md"
+}
+
+Created add-topic/SKILL.md: orchestration skill wiring research-history → format decision → file creation → README linking → optional encode-seed.
+
+- Created `.github/prompts/deep-dive.prompt.md`: single-topic deep-dive prompt producing a full article in the appropriate category folder
+- Created `.github/skills/add-topic/SKILL.md`: orchestration skill that auto-discovers coverage gaps or accepts a topic list, delegates to research-history, decides table-row vs. dedicated-file format, creates files, and updates the README
