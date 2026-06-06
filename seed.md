@@ -122,3 +122,63 @@ Created add-topic/SKILL.md: orchestration skill wiring research-history → form
 
 - Created `.github/prompts/deep-dive.prompt.md`: single-topic deep-dive prompt producing a full article in the appropriate category folder
 - Created `.github/skills/add-topic/SKILL.md`: orchestration skill that auto-discovers coverage gaps or accepts a topic list, delegates to research-history, decides table-row vs. dedicated-file format, creates files, and updates the README
+---
+
+## Add instructions file, update README, and publish-session skill — 2026-06-06
+
+Created a workspace instructions file to enforce 1764 content standards, ran the update-readme prompt to fill category gaps with 7 new entries, and built the publish-session skill to orchestrate end-of-session logging, committing, and pushing.
+
+Ran read_file
+Completed with input: {
+  "filePath": "/Applications/.../agent-customization/references/instructions.md"
+}
+
+Loaded instructions reference for frontmatter template, applyTo patterns, and discovery modes.
+
+Ran vscode_askQuestions
+Completed with input: {
+  "questions": [
+    { "header": "scope", "question": "Where should this instructions file live?" },
+    { "header": "focus", "question": "What behavior should the instructions enforce?" },
+    { "header": "trigger", "question": "Auto-attach or on-demand?" }
+  ]
+}
+
+User selected: workspace scope (.github/instructions/); both content standards and agent workflow; both auto-attach to *.md and on-demand discovery.
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/instructions/1764-content.instructions.md"
+}
+
+Created instructions file covering: five category slugs, two-source verification rule, README table row format (≤25 words, no duplicates), dedicated file path convention and required frontmatter, agent workflow routing (which skill/prompt to invoke per task), and content tone & style rules. Applies to **/*.md.
+
+Ran replace_string_in_file
+Completed with input: {
+  "filePath": "README.md",
+  "oldString": "| Brown University founded | ... |\n\n## Contributing",
+  "newString": "7 new rows appended + ## Contributing"
+}
+
+Added 7 verified 1764 entries to the Notable Events table: Currency Act (Economics), Battle of Buxar (History & Politics), The Castle of Otranto (Arts & Culture), On Crimes and Punishments (Arts & Culture), William Hogarth dies (People), Robert Fulton born (People), James Watt studies steam (Science & Discovery).
+
+Ran vscode_askQuestions
+Completed with input: {
+  "questions": [
+    { "header": "skill_topic", "question": "What workflow should this new skill capture?" },
+    { "header": "scope", "question": "Where should the skill live?" }
+  ]
+}
+
+User selected: publish session (encode-seed → git status review → commit → push); workspace scope (.github/skills/).
+
+Ran create_file
+Completed with input: {
+  "filePath": ".github/skills/publish-session/SKILL.md"
+}
+
+Created publish-session skill with a 7-step procedure: log session via encode-seed, review git status grouped by change type, stage with git add -A, auto-generate or accept a commit message using conventional commit prefixes, commit, confirm then push to origin/main, and report SHA + GitHub link.
+
+- Created `.github/instructions/1764-content.instructions.md`: workspace instructions enforcing content standards, source verification, README format, and agent workflow routing for all *.md files
+- Updated `README.md`: added 7 new Notable Events rows covering all five categories
+- Created `.github/skills/publish-session/SKILL.md`: end-of-session skill orchestrating encode-seed, git commit, and push with confirmation gate before pushing

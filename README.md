@@ -24,6 +24,13 @@
 | Voltaire's *Dictionnaire philosophique* | Published in 1764, a landmark work of the Enlightenment |
 | Mozart tours Europe | Wolfgang Amadeus Mozart (age 8) performs across Europe |
 | Brown University founded | Originally chartered as the College of Rhode Island |
+| Currency Act | British Parliament prohibits American colonies from issuing paper money as legal tender, deepening colonial resentment toward British economic control. |
+| Battle of Buxar | East India Company forces defeat the Mughal Emperor and Nawabs at Buxar on October 22, consolidating British dominance over Bengal. |
+| *The Castle of Otranto* | Horace Walpole publishes the first Gothic novel, establishing a new literary genre of supernatural terror and medieval atmosphere. |
+| *On Crimes and Punishments* | Cesare Beccaria publishes *Dei delitti e delle pene*, founding modern criminology and arguing against torture and capital punishment. |
+| William Hogarth dies | English painter and engraver William Hogarth, celebrated for moral satire, dies October 26, ending a defining era of British art. |
+| Robert Fulton born | American inventor Robert Fulton, later builder of the first commercially successful steamboat, born November 14 in Pennsylvania. |
+| James Watt studies steam | James Watt begins systematic experiments on steam engine efficiency at the University of Glasgow, leading to his landmark separate-condenser design. |
 
 ## Contributing
 
